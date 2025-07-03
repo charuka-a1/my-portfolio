@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Charuka Lakshitha | Portfolio</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"/>
+
+  <style>
+    #cv a {
+      display: inline-block;
+      padding: 14px 28px;
+      background-color: #1e88e5;
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: bold;
+      font-size: 16px;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    }
+
+    #cv a:hover {
+      background-color: #1565c0;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+<div class="bubbles">
+  <span></span><span></span><span></span><span></span><span></span>
+  <span></span><span></span><span></span><span></span><span></span>
+</div>
+
+<header>
+  <div class="container">
+    <h1>Charuka Lakshitha</h1>
+    <p>Computer Hardware Technician | Computer Application Assistant | AI Explorer</p>
+  </div>
+</header>
+
+<nav>
+  <div class="container">
+    <ul>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#cv">CV</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section id="about" class="container about-section">
+  <div class="about-box">
+    <img src="Charuka.jpg" alt="Charuka Lakshitha" class="profile-img">
+  </div>
+</section>
+
+<section id="about" class="container">
+  <h2>About Me</h2>
+  <p>
+    I am a qualified <strong>Computer Hardware Technician (NVQ Level 4)</strong>, and another individual in the team is a certified <strong>Computer Application Assistant (NVQ Level 3)</strong>. Together, we are passionate about technology, computing, and the evolving world of AI.
+  </p>
+</section>
+
+<section id="skills" class="container">
+  <h2>Skills</h2>
+  <ul class="skills">
+    <li>PC Assembling & Troubleshooting</li>
+    <li>Operating System Installation (Windows/Linux)</li>
+    <li>Microsoft Office (Word, Excel, PowerPoint)</li>
+    <li>Computer & Peripheral Maintenance</li>
+    <li>Basic Networking & IP Configuration</li>
+    <li>File Management & Data Backup</li>
+    <li>Email & Internet Usage</li>
+    <li>Basic Graphic Design</li>
+  </ul>
+</section>
+
+<section id="contact" class="container">
+  <h2>Contact Me</h2>
+  <p>Email: <a href="mailto:charukalakshitha022@gmail.com">charukalakshitha022@gmail.com</a></p>
+  <p>Phone: +94 74 293 8523</p>
+</section>
+
+<section id="cv" class="container">
+  <h2>My CV</h2>
+  <a href="#" onclick="confirmDownload(event)">View My CV</a>
+</section>
+
+<footer>
+  <div class="container">
+    <p>&copy; 2025 Charuka Lakshitha. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  function confirmDownload(event) {
+    event.preventDefault(); 
+
+    Swal.fire({
+      title: 'Download CV?',
+      text: 'Do you want to open this CV and download it?',
+      iconHtml: '<img src="https://cdn-icons-png.flaticon.com/512/942/942748.png" width="60">',
+      customClass: {
+        popup: 'animate__animated animate__fadeInDown',
+      },
+      background: '#2c2c2c',
+      color: '#ffffff',
+      showCancelButton: true,
+      confirmButtonColor: '#00c853',
+      cancelButtonColor: '#d32f2f',
+      confirmButtonText: 'Yes, open it',
+      cancelButtonText: 'No',
+      allowOutsideClick: true,
+      allowEscapeKey: true,
+      allowEnterKey: true,
+    backdrop: true
+    }).then((result) => {
+      if (result.isConfirmed) {
+      window.open("https://drive.google.com/file/d/1P_oMNDMXFGIgUpKB54ywouFBrlVdxqcQ/preview", "_blank");
+      }
+    });
+  }
+</script>
+
+<script src="stylesheet.js"></script>
+</body>
+</html>
