@@ -1,0 +1,169 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(-45deg, #1abc9c, #3498db, #9b59b6, #f39c12);
+    background-size: 400% 400%;
+    animation: gradientBG 12s ease infinite;
+    color: #333;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+header {
+    background: #2c3e50;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+nav {
+    background: #1abc9c;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+section {
+    margin-top: 40px;
+}
+
+.skills {
+    list-style: square;
+    padding-left: 20px;
+}
+
+.about-section {
+    text-align: center;
+}
+
+.about-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 50px;
+    box-shadow: 0 8px 20px rgba(11, 0, 0, 0.1);
+    max-width: 600px;
+    margin: auto;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 2px;
+    border: 3px solid #ff1900;
+}
+
+footer {
+    background: #34495e;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s ease;
+    max-width: 800px;
+    margin: 40px auto;
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.bubbles {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.bubbles span {
+    position: absolute;
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    bottom: -100px;
+    border-radius: 50%;
+    animation: rise 20s linear infinite;
+}
+
+.bubbles span:nth-child(1) { left: 10%; width: 40px; height: 40px; animation-delay: 0s; }
+.bubbles span:nth-child(2) { left: 20%; animation-delay: 2s; }
+.bubbles span:nth-child(3) { left: 25%; width: 60px; height: 60px; animation-delay: 4s; }
+.bubbles span:nth-child(4) { left: 40%; animation-delay: 6s; }
+.bubbles span:nth-child(5) { left: 55%; animation-delay: 8s; }
+.bubbles span:nth-child(6) { left: 70%; width: 20px; height: 20px; animation-delay: 10s; }
+.bubbles span:nth-child(7) { left: 80%; animation-delay: 12s; }
+.bubbles span:nth-child(8) { left: 85%; animation-delay: 14s; }
+.bubbles span:nth-child(9) { left: 90%; animation-delay: 16s; }
+.bubbles span:nth-child(10) { left: 100%; animation-delay: 18s; }
+
+@keyframes rise {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-1000px) scale(0.5);
+        opacity: 0;
+    }
+}
+nav a {
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: background 0.3s;
+}
+
+nav a:hover {
+    background-color: #16a085;
+}
